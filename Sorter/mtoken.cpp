@@ -35,9 +35,11 @@ void MToken::getToken() {
 	QUrl current("https://www.deviantart.com/oauth2/token");
 	QUrlQuery par;
 	par.addQueryItem("grant_type", "client_credentials");
+	QStringList ids;
+	loadFile("backup/secret.txt", ids);
 	// Add your id and secret to run
-	par.addQueryItem("client_id", "4146");
-	par.addQueryItem("client_secret", "74324cd51181766352ee8246178cda69");
+	par.addQueryItem("client_id", ids[0]);
+	par.addQueryItem("client_secret", ids[1]);
 	current.setQuery(par);
 	token = QJsonDocument::fromJson(GETt(current)).object().value("access_token").toString();
 	qDebug() << "Token: " << token;

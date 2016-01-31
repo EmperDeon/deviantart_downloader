@@ -1,5 +1,6 @@
 #include <QtCore>
 #include <mtoken.h>
+
 int main(){
 	QStringList links;
 	QStringList exist;

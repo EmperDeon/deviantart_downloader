@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/DevsGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/DevsGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Download_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Download_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/FoldersGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/FoldersGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Runner_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Runner_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Sorter_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Sorter_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/DevsGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/DevsGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Download_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Download_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/FoldersGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/FoldersGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Runner_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Runner_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Sorter_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Sorter_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/DevsGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/DevsGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Download_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Download_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/FoldersGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/FoldersGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Runner_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Runner_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Sorter_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Sorter_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/DevsGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/DevsGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Download_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Download_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/FoldersGet_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/FoldersGet_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Runner_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Runner_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Sorter_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Sorter_automoc.cpp" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/mtoken.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mtoken.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Runner/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sorter/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sorter/main.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QDDSPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Declarative/Qt5DeclarativeConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Declarative/Qt5Declarative_QtQuick1Plugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Declarative/Qt5DeclarativeConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Script/Qt5ScriptConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Script/Qt5ScriptConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Core/Qt5CoreMacros.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Network/Qt5Network_QNativeWifiEnginePlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLion/mingw492_32/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DevsGet/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DevsGet/main.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FoldersGet/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FoldersGet/main.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Download/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Download/main.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/include" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include-fixed" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/mkspecs/win32-g++" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/i686-w64-mingw32/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/include" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include-fixed" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/mkspecs/win32-g++" />
+          <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/i686-w64-mingw32/include" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/FoldersGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/DevsGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Runner_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Download_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/MinSizeRel/Sorter_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/FoldersGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/DevsGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Download_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Sorter_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Debug/Runner_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/DevsGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/FoldersGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Download_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Sorter_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/Release/Runner_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/FoldersGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/DevsGet_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Runner_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Sorter_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/b90dd2d3/b90dd2d3/RelWithDebInfo/Download_automoc.cpp" />
+        </excluded>
+      </library>
+    </orderEntry>
+  </component>
+</module>
