@@ -24,6 +24,9 @@ private slots:
 	void trayClick(QSystemTrayIcon::ActivationReason reason);
 
 	void checkFiles();
+	void checkNextFile();
+	void tryStartNextFile();
+
 	void moveFiles();
 	void printTime(int i, int t);
 
@@ -38,6 +41,7 @@ private:
 	QRadioButton* rb_2;
 	QRadioButton* rb_3;
 	QPushButton* rbstart;
+	int jobType = 0;// 1-Download, 2-Check, 3-Move
 
 	// Download-Check
 	QNetworkAccessManager manager;
@@ -48,6 +52,11 @@ private:
 	QTime* downloadTime;
  MToken* token;
 
+	// Check
+	QFile ex, ws, de;
+	int iex=0,iws=0,ide=0;
+
+	// Other
 	int downloadedCount;
 	int totalCount;
 

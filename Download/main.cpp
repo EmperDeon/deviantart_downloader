@@ -254,47 +254,73 @@ void DownloadManager::trayClick(QSystemTrayIcon::ActivationReason reason){
 
 void DownloadManager::checkFiles(){
 	downloadTime = new QTime(QTime::currentTime());
-	QFile ex("c_exists.txt"), ws("c_wrong.txt"), de("c_todown.txt");
+	ex.setFileName("c_exists.txt");
+	ws.setFileName("c_wrong.txt");
+	de.setFileName("c_todown.txt");
 	ex.open(QFile::WriteOnly);
 	ws.open(QFile::WriteOnly);
 	de.open(QFile::WriteOnly);
-	int i=0,iex=0,iws=0,ide=0;
+
+	downloadedCount = 0;
 	QStringList devs;
 	loadFile("linksF.txt", devs);
-	for(QString u : devs){
-		QJsonObject o;
-		QString filename;
+	for(QString u : devs)
+		this->downloadQueue.append(QUrl(u));
+	totalCount = devs.size();
 
-		QUrl c("https://www.deviantart.com/api/v1/oauth2/deviation/download/"+QStringRef(&u, 2, u.length() - 2).toString());
-		QUrlQuery q;
-		q.addQueryItem("access_token", token->token);
-		c.setQuery(q);
-		o = QJsonDocument::fromJson(token->GET(c)).object();
-		filename = saveFileName(o);
-
-		output.setFileName(filename);
-
-		if(output.exists()) {
-			if(output.size() != o["filesize"].toInt(0)){
-				ws.write(u.toUtf8()+'\n');iws++;
-			}else{
-				ex.write(u.toUtf8()+'\n');iex++;
-			}
-		}else{
-			de.write(u.toUtf8()+'\n');ide++;
-		}i++;
-		if(i % 10 == 0)
-			this->log->append(QString("Checked: %1 (To download: %2; Wrong size: %3; Exists: %4)").arg(i).arg(ide).arg(iws).arg(iex));
-			printTime(i, devs.size());
-	}
-
-	ex.flush();
-	ws.flush();
-	de.flush();
-	ex.close();
-	ws.close();
-	de.close();
 	jobEnd();
+}
+
+void DownloadManager::checkNextFile(){
+	if(downloadQueue.empty()){
+		ex.flush();
+		ws.flush();
+		de.flush();
+		ex.close();
+		ws.close();
+		de.close();
+	}
+	QJsonObject o;
+	QString filename;
+	QString u = downloadQueue.dequeue().toString();
+	QUrl c("https://www.deviantart.com/api/v1/oauth2/deviation/download/"+QStringRef(&u, 2, u.length() - 2).toString());
+	QUrlQuery q;
+	q.addQueryItem("access_token", token->token);
+	c.setQuery(q);
+	o = QJsonDocument::fromJson(token->GET(c)).object();
+	filename = saveFileName(o);
+
+	output.setFileName(filename);
+
+	if(output.exists()) {
+		if(output.size() != o["filesize"].toInt(0)){
+			ws.write(u.toUtf8()+'\n');iws++;
+		}else{
+			ex.write(u.toUtf8()+'\n');iex++;
+		}
+	}else{
+		de.write(u.toUtf8()+'\n');ide++;
+	}
+	downloadedCount++;
+	if(downloadedCount % 10 == 0)
+		this->log->append(QString("Checked: %1 (To download: %2; Wrong size: %3; Exists: %4)").arg(downloadedCount).arg(ide).arg(iws).arg(iex));
+	printTime(downloadedCount, totalCount);
+
+	if(downloadedCount % 100 == 0){
+		ex.flush();
+		ws.flush();
+		de.flush();
+	}
+	tryStartNextFile();
+}
+
+void DownloadManager::tryStartNextFile(){
+	if(running)
+		QTimer::singleShot(100, this, SLOT(checkNextFile()));
+	else {
+		setButtonsEnabled(false);
+		log->append("Check stopped");
+	}
 }
 
 void DownloadManager::moveFiles(){
@@ -347,7 +373,14 @@ void DownloadManager::stopDownload() {
 void DownloadManager::startDownload() {
 	this->running = true;
 	setButtonsEnabled(true);
-	tryStartNextDownload();
+	switch(jobType){
+	case 1: tryStartNextDownload();break;
+	case 2: tryStartNextFile(); break;
+	case 3:
+	case 0:
+	default: break;
+	}
+
 }
 
 void DownloadManager::tryStartNextDownload() {
@@ -370,6 +403,7 @@ void DownloadManager::setWidgetsEnabled(bool f){
 	rb_2->setEnabled(f);
 	rb_3->setEnabled(f);
 	rbstart->setEnabled(f);
+	rbox->setVisible(f);
 
 	b_sr->setEnabled(!f);
 	b_st->setEnabled(!f);
@@ -379,20 +413,25 @@ void DownloadManager::setWidgetsEnabled(bool f){
 void DownloadManager::jobStart(){
 	setWidgetsEnabled(false);
 	if(rb_1->isChecked()){
+		jobType = 1;
 		QStringList links;
 		loadFile("linksF.txt", links);
 		for(QString s : links)
 			append(s);
 
 	}else if(rb_2->isChecked()){
+		jobType = 2;
 		checkFiles();
 	}else if(rb_3->isChecked()){
+		jobType = 3;
 		moveFiles();
 	}else{
+		jobType = 0;
 		setWidgetsEnabled(true);
 	}
 }
 
 void DownloadManager::jobEnd(){
+	jobType = 0;
 	setWidgetsEnabled(true);
 }
