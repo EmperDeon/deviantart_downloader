@@ -253,11 +253,12 @@ void DownloadManager::trayClick(QSystemTrayIcon::ActivationReason reason){
 }
 
 void DownloadManager::checkFiles(){
+	downloadTime = new QTime(QTime::currentTime());
 	QFile ex("c_exists.txt"), ws("c_wrong.txt"), de("c_todown.txt");
 	ex.open(QFile::WriteOnly);
 	ws.open(QFile::WriteOnly);
 	de.open(QFile::WriteOnly);
-
+	int i=0,iex=0,iws=0,ide=0;
 	QStringList devs;
 	loadFile("linksF.txt", devs);
 	for(QString u : devs){
@@ -275,13 +276,16 @@ void DownloadManager::checkFiles(){
 
 		if(output.exists()) {
 			if(output.size() != o["filesize"].toInt(0)){
-				ws.write(u.toUtf8()+'\n');
+				ws.write(u.toUtf8()+'\n');iws++;
 			}else{
-				ex.write(u.toUtf8()+'\n');
+				ex.write(u.toUtf8()+'\n');iex++;
 			}
 		}else{
-			de.write(u.toUtf8()+'\n');
-		}
+			de.write(u.toUtf8()+'\n');ide++;
+		}i++;
+		if(i % 10 == 0)
+			this->log->append(QString("Checked: %1 (To download: %2; Wrong size: %3; Exists: %4)").arg(i).arg(ide).arg(iws).arg(iex));
+			printTime(i, devs.size());
 	}
 
 	ex.flush();
