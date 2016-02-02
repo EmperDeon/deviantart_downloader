@@ -52,7 +52,9 @@ bool MToken::testToken() {
 	current.setQuery(par);
 	QByteArray o = GETt(current);
 	qDebug() << "Status:" << o;
-	return QJsonDocument::fromJson(o).object().value("status").toString() == "success";
+	QString r = QJsonDocument::fromJson(o).object().value("status").toString();
+	if(r != "success" && r.indexOf("Expire") == -1) err = true; else err = false;
+	return r == "success";
 }
 
 void MToken::upd() { if(!testToken()) getToken();}

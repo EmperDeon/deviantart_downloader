@@ -8,6 +8,7 @@ Q_OBJECT
 	QNetworkAccessManager* managerT;
 	QNetworkAccessManager* manager;
 	QTimer* tokent;
+	bool err = false;
 
 	void getToken();
 	bool testToken();
@@ -19,6 +20,7 @@ public:
 	QString token;
 
 	MToken();
+	bool isErrors(){return err;}
 	QByteArray GET(QUrl r);
 };
 

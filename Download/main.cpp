@@ -257,9 +257,10 @@ void DownloadManager::checkFiles(){
 	ex.setFileName("c_exists.txt");
 	ws.setFileName("c_wrong.txt");
 	de.setFileName("c_todown.txt");
-	ex.open(QFile::WriteOnly);
-	ws.open(QFile::WriteOnly);
-	de.open(QFile::WriteOnly);
+
+	if(ex.exists()){ ex.open(QFile::Append); loadFile("c_exists.txt", lex);}else ex.open(QFile::WriteOnly);
+	if(ws.exists()){ ws.open(QFile::Append); loadFile("c_wrong.txt",  lws);}else ws.open(QFile::WriteOnly);
+	if(de.exists()){ de.open(QFile::Append); loadFile("c_todown.txt", lde);}else de.open(QFile::WriteOnly);
 
 	downloadedCount = 0;
 	QStringList devs;
@@ -267,6 +268,7 @@ void DownloadManager::checkFiles(){
 	for(QString u : devs)
 		this->downloadQueue.append(QUrl(u));
 	totalCount = devs.size();
+	tryStartNextFile();
 
 	jobEnd();
 }
@@ -280,9 +282,24 @@ void DownloadManager::checkNextFile(){
 		ws.close();
 		de.close();
 	}
+
 	QJsonObject o;
 	QString filename;
 	QString u = downloadQueue.dequeue().toString();
+	downloadedCount++;
+
+	if(lex.contains(u) || lws.contains(u) || lde.contains(u)) {
+		this->setWindowTitle(QString("Left: %1").arg(totalCount - downloadedCount));
+		if(running)
+			QTimer::singleShot(0, this, SLOT(checkNextFile()));
+		else {
+			setButtonsEnabled(false);
+			log->append("Check stopped");
+		}
+		return;
+	}
+	if(token->isErrors()) {log->append("Too many requets, stopped"); stopDownload(); return;}
+
 	QUrl c("https://www.deviantart.com/api/v1/oauth2/deviation/download/"+QStringRef(&u, 2, u.length() - 2).toString());
 	QUrlQuery q;
 	q.addQueryItem("access_token", token->token);
@@ -301,7 +318,6 @@ void DownloadManager::checkNextFile(){
 	}else{
 		de.write(u.toUtf8()+'\n');ide++;
 	}
-	downloadedCount++;
 	if(downloadedCount % 10 == 0)
 		this->log->append(QString("Checked: %1 (To download: %2; Wrong size: %3; Exists: %4)").arg(downloadedCount).arg(ide).arg(iws).arg(iex));
 	printTime(downloadedCount, totalCount);
@@ -358,7 +374,8 @@ void DownloadManager::printTime(int i, int t){
 	int secs = (sec * t) / i;
 	int hr = secs/3600, mn = (secs%3600)/60, sc = secs - hr*3600 - mn*60;
 
-	this->setWindowTitle(QString("Speed: %1 e/m; End in %2:%3:%4")
+	this->setWindowTitle(QString("Left: %1; Speed: %2 e/m; End in %3:%4:%5")
+																						.arg( t - i )
 																						.arg(speed, 3, 'f', 2)
 																						.arg(hr, 2)
 																						.arg(mn, 2)

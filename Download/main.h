@@ -55,6 +55,7 @@ private:
 	// Check
 	QFile ex, ws, de;
 	int iex=0,iws=0,ide=0;
+	QStringList lex,lws,lde;
 
 	// Other
 	int downloadedCount;
