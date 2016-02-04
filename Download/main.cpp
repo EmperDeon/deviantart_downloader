@@ -160,10 +160,11 @@ void DownloadManager::nextDownload(){
 	QString u = url.toString();
 	QString filename;
 
-	if(exists->contains(u)){
-		++downloadedCount;
-		tryStartNextDownload();
-	}else{
+//	if(exists->contains(u)){
+//		++downloadedCount;
+//		tryStartNextDownload();
+//	}else
+	{
 		QJsonObject o;
 		if(u.startsWith("##")){
 			QUrl c("https://www.deviantart.com/api/v1/oauth2/deviation/download/"+QStringRef(&u, 2, u.length() - 2).toString());
@@ -180,16 +181,16 @@ void DownloadManager::nextDownload(){
 
 		output.setFileName(filename);
 
-		if(output.exists()) {
-			QFile exist("links_exist.txt");
-			exist.open(QFile::Append);
-			exist.write(u.toUtf8() + '\n');
-			exist.flush();
-			exist.close();
-			++downloadedCount;
-			tryStartNextDownload();
-			return;
-		}
+//		if(output.exists()) {
+//			QFile exist("links_exist.txt");
+//			exist.open(QFile::Append);
+//			exist.write(u.toUtf8() + '\n');
+//			exist.flush();
+//			exist.close();
+//			++downloadedCount;
+//			tryStartNextDownload();
+//			return;
+//		}
 
 		log->append(QString("Downloading %1/%2 to %3").arg(downloadedCount+1).arg(totalCount).arg(filename));
 		output.open(QFile::WriteOnly);
@@ -262,6 +263,10 @@ void DownloadManager::checkFiles(){
 	if(ws.exists()){ ws.open(QFile::Append); loadFile("c_wrong.txt",  lws);}else ws.open(QFile::WriteOnly);
 	if(de.exists()){ de.open(QFile::Append); loadFile("c_todown.txt", lde);}else de.open(QFile::WriteOnly);
 
+	iex = lex.size();
+	iws = lws.size();
+	ide = lde.size();
+
 	downloadedCount = 0;
 	QStringList devs;
 	loadFile("linksF.txt", devs);
@@ -269,8 +274,6 @@ void DownloadManager::checkFiles(){
 		this->downloadQueue.append(QUrl(u));
 	totalCount = devs.size();
 	tryStartNextFile();
-
-	jobEnd();
 }
 
 void DownloadManager::checkNextFile(){
@@ -336,6 +339,7 @@ void DownloadManager::tryStartNextFile(){
 	else {
 		setButtonsEnabled(false);
 		log->append("Check stopped");
+		jobEnd();
 	}
 }
 
@@ -432,7 +436,7 @@ void DownloadManager::jobStart(){
 	if(rb_1->isChecked()){
 		jobType = 1;
 		QStringList links;
-		loadFile("linksF.txt", links);
+		loadFile("c_todown.txt", links);
 		for(QString s : links)
 			append(s);
 
@@ -450,5 +454,6 @@ void DownloadManager::jobStart(){
 
 void DownloadManager::jobEnd(){
 	jobType = 0;
+	running = true;
 	setWidgetsEnabled(true);
 }

@@ -54,7 +54,7 @@ private:
 
 	// Check
 	QFile ex, ws, de;
-	int iex=0,iws=0,ide=0;
+	int iex, iws, ide;
 	QStringList lex,lws,lde;
 
 	// Other
