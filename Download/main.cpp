@@ -181,16 +181,16 @@ void DownloadManager::nextDownload(){
 
 		output.setFileName(filename);
 
-//		if(output.exists()) {
-//			QFile exist("links_exist.txt");
-//			exist.open(QFile::Append);
-//			exist.write(u.toUtf8() + '\n');
-//			exist.flush();
-//			exist.close();
-//			++downloadedCount;
-//			tryStartNextDownload();
-//			return;
-//		}
+		if(output.exists()) {
+			QFile exist("links_exist.txt");
+			exist.open(QFile::Append);
+			exist.write(u.toUtf8() + '\n');
+			exist.flush();
+			exist.close();
+			++downloadedCount;
+			tryStartNextDownload();
+			return;
+		}
 
 		log->append(QString("Downloading %1/%2 to %3").arg(downloadedCount+1).arg(totalCount).arg(filename));
 		output.open(QFile::WriteOnly);
@@ -344,9 +344,9 @@ void DownloadManager::tryStartNextFile(){
 }
 
 void DownloadManager::moveFiles(){
-	downloadTime = new QTime;
+	downloadTime = new QTime(QTime::currentTime());
 
-	QStringList list = QDir("down_tosort/").entryList({"*.jpg", "*.png"}, QDir::Files, QDir::Name);int i = 0;
+	QStringList list = QDir("dtosort/").entryList({"*.jpg", "*.png"}, QDir::Files, QDir::Name);int i = 0;
 	p->setMaximum(list.size());
 	log->append(QString("moving %1 files").arg(list.size()));
 	for(QString s : list){
@@ -354,17 +354,23 @@ void DownloadManager::moveFiles(){
 		if(i % 10 == 0) log->append(QString("%1/%2 moved").arg(i).arg(list.size()));
 		printTime(i, list.size());
 
-		QFile f("down_tosort/"+s);
+		QFile f("dtosort/"+s);
 		f.open(QFile::ReadOnly);
 		QByteArray a = f.readAll();
 		f.close();
 
-		f.setFileName(saveFileName("down_tosort/"+s));
-		f.open(QFile::WriteOnly);
-		f.write(a);
-		f.flush();
-		f.close();
-
+		QFile o(saveFileName("dtosort/"+s));
+		if(!o.exists()){
+			o.open(QFile::WriteOnly);
+			o.write(a);
+			o.flush();
+			o.close();
+		}else if(f.size() != o.size()){
+			o.open(QFile::WriteOnly);
+			o.write(a);
+			o.flush();
+			o.close();
+		}
 		qApp->processEvents();
 	}
 	log->append("Resorting finished");
@@ -436,7 +442,7 @@ void DownloadManager::jobStart(){
 	if(rb_1->isChecked()){
 		jobType = 1;
 		QStringList links;
-		loadFile("c_todown.txt", links);
+		loadFile("c_wrong.txt", links);
 		for(QString s : links)
 			append(s);
 
